@@ -15,3 +15,9 @@ class Solution:
         for i in range (n):
             res = res + abs (nums [i] - nums [mid])
         return res
+
+        # Solution 2
+        n = len (nums)
+        mid = sorted (nums) [n // 2]
+        res = sum (abs (i - mid) for i in nums)
+        return res
