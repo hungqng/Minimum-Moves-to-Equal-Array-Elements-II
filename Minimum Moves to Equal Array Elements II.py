@@ -21,3 +21,7 @@ class Solution:
         mid = sorted (nums) [n // 2]
         res = sum (abs (i - mid) for i in nums)
         return res
+
+        # Solution 3
+        nums.sort()
+        return sum(nums[~i] - nums[i] for i in range(len(nums) // 2))
